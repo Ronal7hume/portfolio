@@ -23,6 +23,7 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -301,9 +302,86 @@
                     </div>
                 </div>
 
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Projects</h2>
+                <p>Innovative research and academic engineering implementations</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Project Card -->
+                <div class="glass-card" style="position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 24px; transition: var(--transition-smooth);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px;">
+                        <div>
+                            <span class="hero-tag" style="background: var(--accent-glow); color: var(--accent-secondary); margin-bottom: 12px; display: inline-block;">🎓 Academic Research Project</span>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 8px;">Coal Extraction & Classification using Deep Learning</h3>
+                            <p style="color: var(--accent-secondary); font-weight: 600; font-size: 0.95rem;">Hindusthan College of Engineering & Technology (MCA)</p>
+                        </div>
+                        <span class="timeline-date" style="background: var(--bg-tertiary);">Coimbatore, India</span>
+                    </div>
+
+                    <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.6;">
+                        An advanced computer vision and deep learning project aimed at optimizing clean energy mining. It introduces a high-accuracy Convolutional Neural Network (CNN) algorithm to automate the extraction and sorting of coal from coal gangue (mining waste), successfully replacing high-cost manual and mechanical separation techniques.
+                    </p>
+
+                    <div class="skills-list" style="margin: 8px 0;">
+                        <span class="skill-tag" style="border-color: var(--accent-primary); color: var(--accent-secondary);">Python</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Keras</span>
+                        <span class="skill-tag">CNN Architecture</span>
+                        <span class="skill-tag">OpenCV (Image Processing)</span>
+                        <span class="skill-tag">Active Contour Method</span>
+                        <span class="skill-tag">Data Augmentation</span>
+                    </div>
+
+                    <div style="border-top: 1px solid var(--border-color); padding-top: 20px; display: flex; flex-direction: column; gap: 16px;">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text-primary);">Key Architectural Implementations:</h4>
+                        <ul class="timeline-bullets" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 12px; margin-left: 0;">
+                            <li style="margin-bottom: 0;">**Deep CNN Classification**: Built a robust image identification network to analyze resized (256x256) mining pictures.</li>
+                            <li style="margin-bottom: 0;">**Feature Segmentation**: Integrated the Active Contour method to extract complex spectral characteristics and boundary lines.</li>
+                            <li style="margin-bottom: 0;">**Overfitting Prevention**: Incorporated regularizations (Batch Normalization, Dropout, Weight Regularization) to accelerate learning.</li>
+                            <li style="margin-bottom: 0;">**Denoising Pipeline**: Designed OpenCV preprocessing using Median Filters and Image Augmentation to optimize parameters.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive Abstract Panel -->
+                    <div id="abstract-panel" style="display: none; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 24px; transition: var(--transition-smooth); margin-top: 16px;">
+                        <h4 style="font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: var(--accent-secondary);">Research Abstract:</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; text-align: justify;">
+                            Coal is mainly energy in the world which plays a very important role in the development of the national economy. But there is plenty of coal gangue in addition to coal in the process of mining. The traditional sorting is mainly used by manual selection and mechanical separation. This project explores a new coal classification model based on features extraction and deep learning. In view of the characteristics of high dimensionality, strong correlation, and high redundancy of spectral data, this project proposes to combine features extraction with Convolutional neural network to solve the problem of coal classification, and to further improve the classification accuracy. An improved classification algorithm is proposed, and the improved deep learning algorithm is used to improve and optimize the structure and training parameters of the model. Finally, the project analyzes the results in terms of execution time and accuracy parameters.
+                        </p>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; align-self: flex-start; margin-top: 8px;">
+                        <button onclick="toggleAbstract()" class="btn btn-secondary" id="toggle-abstract-btn" style="padding: 10px 20px; font-size: 0.9rem;">
+                            Show Research Abstract
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Custom Script for Interactive Project Abstract Toggle -->
+    <script>
+        function toggleAbstract() {
+            const panel = document.getElementById('abstract-panel');
+            const btn = document.getElementById('toggle-abstract-btn');
+            if (panel.style.display === 'none') {
+                panel.style.display = 'block';
+                btn.textContent = 'Hide Research Abstract';
+                btn.style.borderColor = 'var(--accent-secondary)';
+            } else {
+                panel.style.display = 'none';
+                btn.textContent = 'Show Research Abstract';
+                btn.style.borderColor = '';
+            }
+        }
+    </script>
 
     <!-- Education Section -->
     <section class="education" id="education" style="background-color: var(--bg-secondary);">

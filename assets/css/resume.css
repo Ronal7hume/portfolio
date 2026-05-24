@@ -371,9 +371,13 @@ body {
     .edu-details {
         font-size: 0.73rem;
     }
-    
     /* Disables print link URLs after anchor tags */
     a[href]:after {
         content: none !important;
+    }
+    
+    /* Hide projects section on physical print to guarantee exactly 1-page PDF */
+    .projects-section {
+        display: none !important;
     }
 }
