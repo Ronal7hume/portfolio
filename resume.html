@@ -45,6 +45,8 @@
                 <span class="separator">•</span>
                 <a href="https://ronal7hume.github.io/portfolio/" target="_blank">ronal7hume.github.io/portfolio</a>
                 <span class="separator">•</span>
+                <a href="https://github.com/Ronal7hume" target="_blank">github.com/Ronal7hume</a>
+                <span class="separator">•</span>
                 <a href="https://www.linkedin.com/in/esakkiraja-n/" target="_blank">linkedin.com/in/esakkiraja-n</a>
             </div>
         </header>
@@ -182,5 +184,17 @@
 
     </main>
 
+    <!-- Auto-trigger print parameter script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('print') || urlParams.has('download')) {
+                // Short timeout to guarantee page CSS paints completely
+                setTimeout(() => {
+                    window.print();
+                }, 600);
+            }
+        });
+    </script>
 </body>
 </html>
