@@ -376,8 +376,9 @@ body {
         content: none !important;
     }
     
-    /* Hide projects section on physical print to guarantee exactly 1-page PDF */
+    /* Show projects section but keep it highly compact to guarantee 1-page PDF layout */
     .projects-section {
-        display: none !important;
+        display: block !important;
+        margin-bottom: 6px !important;
     }
 }
